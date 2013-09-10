@@ -2,7 +2,7 @@
 <!-- saved from url=(0060)http://getbootstrap.com/2.3.2/examples/starter-template.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Ca</title>
+    <title>Costa Rica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -103,8 +103,8 @@ window.onload = function () {
 
     var incr = 0;
     $("#data tfoot th").each(function () {
-        labels3.push(r.text(20 + incr, 225, ($(this).html())).attr(txt1).attr({fill: color}));
-        incr += 46;
+        labels3.push(r.text(27 + incr, 225, ($(this).html())).attr(txt1).attr({fill: color}));
+        incr += 50;
 
     });
     r.drawGrid(leftgutter + X * .5 + .5, topgutter + .5, width - leftgutter - X, height - topgutter - bottomgutter, 10, 10, "#000");
@@ -120,7 +120,12 @@ window.onload = function () {
     label.push(r.text(60, 27, "22 September 2008").attr(txt1).attr({fill: color}));
     label.hide();
     label2 = r.set()
-    label2.push(r.text(120, 150, "A").attr(txt1).attr({fill: color}));
+    label2.push(r.text(30, 45, "Teacher").attr(txt1).attr({fill: color}));
+    label2.push(r.text(30, 57, "Training").attr(txt1).attr({fill: color}));
+    label2.push(r.text(625, 8, "Educational").attr(txt1).attr({fill: color}));
+    label2.push(r.text(625, 20, "Materials").attr(txt1).attr({fill: color}));
+    label2.push(r.text(425, 33, "Increase Education").attr(txt1).attr({fill: color}));
+    label2.push(r.text(425, 45, "Expenses").attr(txt1).attr({fill: color}));
 
     var frame = r.popup(100, 100, label, "right").attr({fill: "#000", stroke: "#666", "stroke-width": 2, "fill-opacity": .7}).hide();
 
@@ -237,11 +242,10 @@ window.onload = function () {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.html">Z3ro</a>
+          <a class="brand" href="index.html">GOAL2</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="index.html">Map</a></li>
-              <li><a href="#">List</a></li>
             </ul>
              <form class="navbar-search pull-right">
               <input type="text" class="span4 search-query" placeholder="Search">
@@ -254,14 +258,15 @@ window.onload = function () {
     <div class="container" style="margin-top:100px;">
   
 
-    <h2>Sri Lanka's Primary School Completion Rate</h2>
-    <h3>+0.12% <span style="font-size:12px;">since 2000 report</span></h3>
-    <h4>#24 in Africa</h4>
-    <h4>#130 in the World</h4>
-    
+    <h2>Costa Rica</h2>
+ 
+    <h3><span style="color:green;">+2.28</span> <span style="font-size:12px;">avg increase since 2000</span></h3>
+    <h4 align="right">#14 in Latin America & The Caribbean</h4>
+    <h4 align="right">#120 in the World</h4>
   
   <div id="chartContainer" style="height: 300px; width: 100%;">
     <table id="data">
+    		<h4 align="center">Primary School Completion Rate</h4>	  
             <tfoot>
                 <tr>
                     <th>1990</th>
@@ -285,40 +290,36 @@ window.onload = function () {
                     <th>2008</th>
                     <th>2009</th>
                     <th>2010</th>
-                    <th>2011</th>
-                    <th>2012</th>
-                    <th>2013</th>
+                    <th>2011</th>              
                     
                 </tr>
             </tfoot>
             <tbody>
                 <tr>
-                    <td>8</td>
-                    <td>25</td>
-                    <td>27</td>
-                    <td>25</td>
-                    <td>54</td>
-                    <td>59</td>
-                    <td>79</td>
-                    <td>47</td>
-                    <td>27</td>
-                    <td>44</td>
-                    <td>44</td>
-                    <td>51</td>
-                    <td>56</td>
-                    <td>83</td>
-                    <td>12</td>
-                    <td>91</td>
-                    <td>52</td>
-                    <td>12</td>
-                    <td>40</td>
-                    <td>8</td>
-                    <td>60</td>
-                    <td>29</td>
-                    <td>7</td>
-                    <td>33</td>
-                        
+                    <td>75.06</td>
+                    <td>79.76</td>
+                    <td>81.71</td>
+                    <td>83.56</td>
+                    <td>82.02</td>
+                    <td>80.60</td>
+                    <td>81.57</td>
+                    <td>81.57</td>
+                    <td>81.57</td>
+                    <td>81.46</td>
+                    <td>86.92</td>
+                    <td>90.55</td>
+                    <td>93.33</td>
+                    <td>93.33</td>
+                    <td>94.87</td>
+                    <td>94.17</td>
+                    <td>90.47</td>
+                    <td>92.39</td>
+                    <td>93.67</td>
+                    <td>96.32</td>
+                    <td>96.28</td>
+                    <td>99.09</td>
                 </tr>
+                <p>Data Source: UNESCO</p>
             </tbody>
         </table>
         <div id="holder"></div>
@@ -326,16 +327,20 @@ window.onload = function () {
       
       <div class="row">
         <div class="span6 events">
+          <h3>Policy Interventions</h3>
+          <strong>A: </strong>Juego-Trabajo - Teacher Training (1990) <br>
+          <strong>B: </strong>Apresto - Educational Materials (2002) <br>
+          <strong>C: </strong> Increase Education Expenditures (1996) <br></br>
+          
           <h3>Notable Events</h3>
-          <strong>A: </strong>Malaria Prevention (1999) <br> <br>
-          <strong>B: </strong>Vitamin A Supplement (2009) <br>
-
+          <strong></strong>None<br>
+          
         </div>
         <div class="span6 incidents">
           <h3>Latest Incidents</h3>
 
-            <p>I didn't attend school as the roads were flooded.<p>
-            <p>I didn't attend school as I had to carry water back home <p> 
+            <p>Mi hija esta enferma.
+            </br>No fui a la escuelca hoy porque no tuve dinero por el transporte.</p> 
 
         </div>
       </div>
