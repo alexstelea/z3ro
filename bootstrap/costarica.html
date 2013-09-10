@@ -96,6 +96,7 @@ window.onload = function () {
         txt = {font: '12px Helvetica, Arial', fill: "#000"},
         txt1 = {font: '10px Helvetica, Arial', fill: "#000"},
         txt2 = {font: '12px Helvetica, Arial', fill: "#000"},
+        txt3 = {font: '12px Helvetica, Arial', fill: "#fff"},
         X = (width - leftgutter) / labels.length,
         labels3 = r.set(),
         max = Math.max.apply(Math, data),
@@ -111,7 +112,7 @@ window.onload = function () {
         is_label_visible = false,
         leave_timer,
         blanket = r.set();
-    label.push(r.text(60, 12, "24 hits").attr(txt));
+    label.push(r.text(60, 12, "24 hits").attr(txt3));
     label.push(r.text(60, 27, "22 September 2008").attr(txt1).attr({fill: color}));
     label.hide();
     label2 = r.set()
@@ -185,45 +186,7 @@ window.onload = function () {
     label[1].toFront();
     blanket.toFront();
 };
-//   window.onload = function () {
-//     var chart = new CanvasJS.Chart("chartContainer",
-//     {
-//       title:{
-//      },
-//       theme: "theme2",
-//      axisX: {
-//        valueFormatString: "YYYY"      
-//       },
-//       axisY:{
-//         valueFormatString: "#0"
 
-//       },
-//      data: [
-//      {        
-//       type: "line",
-//       showInLegend: true,
-//        legendText: "% of Children Grade 1-5 That Can Read And Write",
-//       dataPoints: [        
-//       { x: new Date(2001, 01, 1), y: 99.64092, indexLabel: "A", markerType: "",  markerColor: "", markerSize: 0},
-//       { x: new Date(2002, 01, 1) , y: 99.83581, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0  },
-//       { x: new Date(2003, 01, 1) , y: 99.81501, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2004, 01, 1) , y: 96.74539, indexLabel: "", markerType: "", markerColor: "", markerSize: 0 },
-//       { x: new Date(2005, 01, 1) , y: 99.84993, indexLabel: "", markerType: "", markerColor: "", markerSize: 0 },
-//       { x: new Date(2006, 01, 1) , y: 99.76086, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2007, 01, 1) , y: 98.96681, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2008, 01, 1) , y: 97.22796, indexLabel: "", markerType: "", markerColor: "#", markerSize: 0 },
-//       { x: new Date(2009, 01, 1) , y: 93.58763, indexLabel: "B", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2010, 01, 1) , y: 94.02756, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },  
-//       { x: new Date(2011, 01, 1) , y: 92.86301, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 }
-
-
-//       ]
-//     }
-//     ]
-//   });
-
-// chart.render();
-// }
 </script>
   <style type="text/css"></style></head>
 

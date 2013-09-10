@@ -40,8 +40,8 @@
 }
 .speech-bubble {
     position:relative;
-    width: 320px;
-    padding: 10px;
+    width: 440px;
+    padding: 5px;
     margin: 3em;
     margin-left: 0px;
     background-color:#FFF;
@@ -50,7 +50,7 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 10px solid rgba(0,0,0,0.095);
+    border: 5px solid rgba(0,0,0,0.095);
 }
 .speech-bubble p {
     font-size: 1.25em;
@@ -61,7 +61,7 @@
     content: "\0020";
     display:block;
     position:absolute;
-    top:-20px;
+    top:-18px;
     left:0px;
     z-index:2;
     width: 0;
@@ -72,8 +72,8 @@
     border-bottom-color:#FFF;
 }
 .speech-bubble:before {
-    top:-30px;
+    top:-23px;
     z-index:1;
-    border-bottom-color:rgba(0,0,0,0.095);
+    border-bottom-color:rgba(0,0,0,0.09);
 }
 
