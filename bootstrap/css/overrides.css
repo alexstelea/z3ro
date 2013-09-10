@@ -1,5 +1,42 @@
 .map{
-	display: block;
-	height: 600px;
+	height: 100%;
+	width: auto;
+	min-height: 600px;
+	margin-top: -20px;
 
+}
+#chartContainer {
+	margin-top: 40px;
+}
+.events, .incidents {
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+
+path {
+	stroke: blue;
+	stroke-width: 1;
+	fill: none;
+}
+			
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: grey;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
 }

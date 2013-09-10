@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<script src="js/Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" height="450" width="600"></canvas>
+
+
+	<script>
+
+		var lineChartData = {
+			labels : [2001, 2002,  2003,  2004,  2005,  2006,  2007,  2008,  2009,  2010,  2011],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [99.64092,  99.83581,  99.81501,  96.74539,  99.84993,  99.76086,  98.96681,  97.22796,  93.58763,  94.02756,  92.86301]
+				},
+				
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+	
+	</script>
+	</body>
+</html>
