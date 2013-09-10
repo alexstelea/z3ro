@@ -1,194 +1,179 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!DOCTYPE html>
+  <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>GOAL2</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="Alex Stelea">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/overrides.css">
-    <link rel="stylesheet" href="css/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="js/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="js/raphael-min.js"></script>
-    <script src="js/kartograph.min.js"></script>
-    
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/gmaps.js"></script>
-    <script src="js/world.js"></script>
-    <script>
-      function findOnMap(){
-
-        var geocoder = new google.maps.Geocoder();
-        
-        var address = document.getElementById("latlon").value;
-        console.log(address);
-        geocoder.geocode( { 'address': address}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK)
-          {
-              // do something with the geocoded result
-              //
-              console.log(results[0].geometry);
-              console.log(results[0].geometry.location.pb) 
-              console.log(results[0].geometry.location.qb) 
-
-              // results[0].geometry.location.longitude
-          }
-        });
-
-          var mapObj = $('#world-map');
-          console.log(mapObj[0]);
-
-  
-
-      }
-    </script>
-    
-    <style>
+      <!-- Le styles -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/overrides.css">
+      <link rel="stylesheet" href="css/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+      <script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+      <script src="js/jquery-jvectormap-world-mill-en.js"></script>
       
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+      <script src="js/world.js"></script>
+      <script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+        //Not implemented
+        function findOnMap(){
 
+          var geocoder = new google.maps.Geocoder();
+          
+          var address = document.getElementById("latlon").value;
+          console.log(address);
+          geocoder.geocode( { 'address': address}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK)
+            {
+                console.log(results[0].geometry);
+                console.log(results[0].geometry.location.pb) 
+                console.log(results[0].geometry.location.qb) 
 
-  </head>
+            }
+          });
 
-  <body style="zoom: 1;">
+            var mapObj = $('#world-map');
+            console.log(mapObj[0]);
+        }
+      </script>
+    
+      <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">GOAL2</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Map</a></li>
-            </ul>
-             <form action="javascript:findOnMap();" class="navbar-search pull-right latlon-form">
-              <input type="text" class="span4 search-query" id="latlon" placeholder="Search">
+    </head>
 
-            </form>
-          </div><!--/.nav-collapse -->
+    <body style="zoom: 1;">
+
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">GOAL2</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Map</a></li>
+              </ul>
+               <form action="javascript:findOnMap();" class="navbar-search pull-right latlon-form">
+                <input type="text" class="span4 search-query" id="latlon" placeholder="Search">
+
+              </form>
+            </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
-    </div>
-    <p style="margin-left: 20px; margin-top:60px; text-align: center;color: grey; ">Click on a country to view trends over time and relevant education policy interventions</p>
-    <div id="world-map" class="span12"></div>
+      <p style="margin-left: 20px; margin-top:60px; text-align: center;color: grey; ">Click on a country to view trends over time and relevant education policy interventions</p>
+      <div id="world-map" class="span12"></div>
 
-    <div class="container">
+      <div class="container">
+          
+
+            <script src="jquery-jvectormap-1.2.2.min.js"></script>
+            <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+            <script type="text/javascript">
+
+            var rateData = {
+              "CR": 99.09,
+              "KH": 89.9,
+              "MW": 71.16,
+              "DZ": 94,
+              "AG": 92,
+              "AR": 108,
+              "AW": 93,
+              "AU": 92,
+              "AT": 96,
+              "AZ": 92,
+              "BB": 114,
+              "BY": 103,
+              "BZ": 107,
+              "BJ": 66,
+              "BT": 105,
+              "BA": 76,
+              "BF": 54,
+              "BI": 62,
+              "KH": 90,
+              "CM": 72,
+              "CV": 96,
+              "CF": 33,
+            };
+
+            $('#world-map').vectorMap({
+
+            container: $('#map-world'),
+            map: 'world_mill_en',
+            backgroundColor: '#8c97a4',
+            markerStyle: {
+              initial: {
+                fill: '#F8E23B',
+                stroke: '#383f47'
+              }
+            },
+            hoverOpacity: 0.7,
+            hoverColor: false,
+            regionsSelectable: true,
+            regionsSelectableOne: true,
+            
+            focusOn: 
+            {
+              x: 0.5,
+              y: 0.5,
+              scale: 2
+            },
+            series: {
+              regions: [{
+                values: rateData,
+                scale: ['#C8EEFF', '#0071A4'],
+                normalizeFunction: 'polynomial'
+              }]
+            },
+            onRegionLabelShow: function(e, el, code){
+              if (rateData[code] == undefined){
+                rateData[code] = "N/A";
+              }
+              el.html(el.html()+' (Primary School Completion Rate - '+rateData[code]+')');
+            },
+            onRegionClick: function(event, code){
+              if (code == "CR") {
+                window.location.href = "costarica.html";
+              }
+              if (code == "KH") {
+                window.location.href = "cambodia.html";
+              }
+              if (code == "MW") {
+                window.location.href = "malawi.html";
+              }
+            }
+            });
+            </script>
+
+        
         
 
-          <script src="jquery-jvectormap-1.2.2.min.js"></script>
-          <script src="js/jquery-jvectormap-world-mill-en.js"></script>
-          <script type="text/javascript">
-
-          var rateData = {
-            "CR": 99.09,
-            "KH": 89.9,
-            "MW": 71.16,
-            "DZ": 94,
-            "AG": 92,
-            "AR": 108,
-            "AW": 93,
-            "AU": 92,
-            "AT": 96,
-            "AZ": 92,
-            "BB": 114,
-            "BY": 103,
-            "BZ": 107,
-            "BJ": 66,
-            "BT": 105,
-            "BA": 76,
-            "BF": 54,
-            "BI": 62,
-            "KH": 90,
-            "CM": 72,
-            "CV": 96,
-            "CF": 33,
-          };
-          $('#world-map').vectorMap({
-
-          container: $('#map-world'),
-          map: 'world_mill_en',
-          backgroundColor: '#8c97a4',
-          markerStyle: {
-            initial: {
-              fill: '#F8E23B',
-              stroke: '#383f47'
-            }
-          },
-          hoverOpacity: 0.7,
-          hoverColor: false,
-          regionsSelectable: true,
-          regionsSelectableOne: true,
-          
-          focusOn: 
-          {
-            x: 0.5,
-            y: 0.5,
-            scale: 2
-          },
-          series: {
-            regions: [{
-              values: rateData,
-              scale: ['#C8EEFF', '#0071A4'],
-              normalizeFunction: 'polynomial'
-            }]
-          },
-          onRegionLabelShow: function(e, el, code){
-            if (rateData[code] == undefined){
-              rateData[code] = "N/A";
-            }
-            el.html(el.html()+' (Primary School Completion Rate - '+rateData[code]+')');
-          },
-          onRegionClick: function(event, code){
-            if (code == "CR") {
-              window.location.href = "costarica.html";
-            }
-            if (code == "KH") {
-              window.location.href = "cambodia.html";
-            }
-            if (code == "MW") {
-              window.location.href = "malawi.html";
-            }
-          }
-          });
-          </script>
-
-      
-      
-
-    </div> <!-- /container -->
+      </div> <!-- /container -->
 
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./index_files/jquery.js"></script>
-    <script src="./index_files/bootstrap-transition.js"></script>
-    <script src="./index_files/bootstrap-alert.js"></script>
-    <script src="./index_files/bootstrap-modal.js"></script>
-    <script src="./index_files/bootstrap-dropdown.js"></script>
-    <script src="./index_files/bootstrap-scrollspy.js"></script>
-    <script src="./index_files/bootstrap-tab.js"></script>
-    <script src="./index_files/bootstrap-tooltip.js"></script>
-    <script src="./index_files/bootstrap-popover.js"></script>
-    <script src="./index_files/bootstrap-button.js"></script>
-    <script src="./index_files/bootstrap-collapse.js"></script>
-    <script src="./index_files/bootstrap-carousel.js"></script>
-    <script src="./index_files/bootstrap-typeahead.js"></script>
+      <!-- Le javascript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="./index_files/jquery.js"></script>
+      <script src="./index_files/bootstrap-transition.js"></script>
+      <script src="./index_files/bootstrap-alert.js"></script>
+      <script src="./index_files/bootstrap-modal.js"></script>
+      <script src="./index_files/bootstrap-dropdown.js"></script>
+      <script src="./index_files/bootstrap-scrollspy.js"></script>
+      <script src="./index_files/bootstrap-tab.js"></script>
+      <script src="./index_files/bootstrap-tooltip.js"></script>
+      <script src="./index_files/bootstrap-popover.js"></script>
+      <script src="./index_files/bootstrap-button.js"></script>
+      <script src="./index_files/bootstrap-collapse.js"></script>
+      <script src="./index_files/bootstrap-carousel.js"></script>
+      <script src="./index_files/bootstrap-typeahead.js"></script>
 
 
 
-</body></html>
+  </body></html>
