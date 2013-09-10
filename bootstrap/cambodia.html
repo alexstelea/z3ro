@@ -93,20 +93,14 @@ window.onload = function () {
         colorhue = .6 || Math.random(),
         color = "hsl(" + [colorhue, .5, .5] + ")",
         r = Raphael("holder", width, height),
-        txt = {font: '12px Helvetica, Arial', fill: "#fff"},
-        txt1 = {font: '10px Helvetica, Arial', fill: "#fff"},
+        txt = {font: '12px Helvetica, Arial', fill: "#000"},
+        txt1 = {font: '10px Helvetica, Arial', fill: "#000"},
         txt2 = {font: '12px Helvetica, Arial', fill: "#000"},
         X = (width - leftgutter) / labels.length,
         labels3 = r.set(),
         max = Math.max.apply(Math, data),
         Y = (height - bottomgutter - topgutter) / max;
 
-    var incr = 0;
-    $("#data tfoot th").each(function () {
-        labels3.push(r.text(27 + incr, 225, ($(this).html())).attr(txt1).attr({fill: color}));
-        incr += 50;
-
-    });
     r.drawGrid(leftgutter + X * .5 + .5, topgutter + .5, width - leftgutter - X, height - topgutter - bottomgutter, 10, 10, "#000");
     var path = r.path().attr({stroke: color, "stroke-width": 4, "stroke-linejoin": "round"}),
         bgp = r.path().attr({stroke: "none", opacity: .3, fill: color}),
@@ -262,8 +256,8 @@ window.onload = function () {
     <h2>Cambodia</h2>
  
     <h3><span style="color:green;">+22.64</span> <span style="font-size:12px;">avg increase since 2000</span></h3>
-    <h4 align="right">#24 in Asia</h4>
-    <h4 align="right">#130 in the World</h4>
+    <h4 style="color: grey; margin-top: -95px; margin-right:100px;" align="right">#24 in Asia</h4>
+    <h4 style="color: grey; margin-right:100px;" align="right">#130 in the World</h4>
   
   <div id="chartContainer" style="height: 300px; width: 100%;">
     <table id="data">
@@ -321,9 +315,9 @@ window.onload = function () {
                     <td>89.90</td>
                         
                 </tr>
-                <p>Data Source: UNESCO</p>
             </tbody>
         </table>
+        <p style="margin-right: 100px;" class="pull-right">Data Source: UNESCO</p>
         <div id="holder"></div>
   </div>
       

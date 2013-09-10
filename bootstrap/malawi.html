@@ -93,8 +93,8 @@ window.onload = function () {
         colorhue = .6 || Math.random(),
         color = "hsl(" + [colorhue, .5, .5] + ")",
         r = Raphael("holder", width, height),
-        txt = {font: '12px Helvetica, Arial', fill: "#fff"},
-        txt1 = {font: '10px Helvetica, Arial', fill: "#fff"},
+        txt = {font: '12px Helvetica, Arial', fill: "#000"},
+        txt1 = {font: '10px Helvetica, Arial', fill: "#000"},
         txt2 = {font: '12px Helvetica, Arial', fill: "#000"},
         X = (width - leftgutter) / labels.length,
         labels3 = r.set(),
@@ -189,45 +189,7 @@ window.onload = function () {
     label[1].toFront();
     blanket.toFront();
 };
-//   window.onload = function () {
-//     var chart = new CanvasJS.Chart("chartContainer",
-//     {
-//       title:{
-//      },
-//       theme: "theme2",
-//      axisX: {
-//        valueFormatString: "YYYY"      
-//       },
-//       axisY:{
-//         valueFormatString: "#0"
 
-//       },
-//      data: [
-//      {        
-//       type: "line",
-//       showInLegend: true,
-//        legendText: "% of Children Grade 1-5 That Can Read And Write",
-//       dataPoints: [        
-//       { x: new Date(2001, 01, 1), y: 99.64092, indexLabel: "A", markerType: "",  markerColor: "", markerSize: 0},
-//       { x: new Date(2002, 01, 1) , y: 99.83581, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0  },
-//       { x: new Date(2003, 01, 1) , y: 99.81501, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2004, 01, 1) , y: 96.74539, indexLabel: "", markerType: "", markerColor: "", markerSize: 0 },
-//       { x: new Date(2005, 01, 1) , y: 99.84993, indexLabel: "", markerType: "", markerColor: "", markerSize: 0 },
-//       { x: new Date(2006, 01, 1) , y: 99.76086, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2007, 01, 1) , y: 98.96681, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2008, 01, 1) , y: 97.22796, indexLabel: "", markerType: "", markerColor: "#", markerSize: 0 },
-//       { x: new Date(2009, 01, 1) , y: 93.58763, indexLabel: "B", markerType: "", markerColor: "" , markerSize: 0 },
-//       { x: new Date(2010, 01, 1) , y: 94.02756, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 },  
-//       { x: new Date(2011, 01, 1) , y: 92.86301, indexLabel: "", markerType: "", markerColor: "" , markerSize: 0 }
-
-
-//       ]
-//     }
-//     ]
-//   });
-
-// chart.render();
-// }
 </script>
   <style type="text/css"></style></head>
 
@@ -260,8 +222,8 @@ window.onload = function () {
     <h2>Malawi</h2>
  
     <h3><span style="color:green;">+4.05</span> <span style="font-size:12px;">avg increase since 2000</span></h3>
-    <h4 align="right">#12 in Sub-Saharan Africa</h4>
-    <h4 align="right">#230 in the World</h4>
+    <h4 style="color: grey; margin-top: -95px; margin-right:100px;" align="right">#12 in Sub-Saharan Africa</h4>
+    <h4 style="color: grey; margin-right:100px;" align="right">#230 in the World</h4>
   
   <div id="chartContainer" style="height: 300px; width: 100%;">
     <table id="data">
@@ -319,9 +281,10 @@ window.onload = function () {
                     <td>71.16</td>
                         
                 </tr>
-                <p>Data Source: UNESCO</p>
             </tbody>
         </table>
+        <p style="margin-right: 100px;" class="pull-right">Data Source: UNESCO</p>
+
         <div id="holder"></div>
   </div>
       
