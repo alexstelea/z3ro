@@ -31,3 +31,10 @@
 	color: #ccf;
 
 }
+
+#world-map{
+	width: 100%;
+	height: 800px;
+	margin-left: 0px;
+	margin-top: 10px;
+}

@@ -136,8 +136,12 @@ var GMaps = (function(global) {
   var doc = document;
 
   var GMaps = function(options) {
+       google.load('visualization', '1', {'packages': ['geomap']});
+
     options.zoom = options.zoom || 15;
     options.mapType = options.mapType || 'roadmap';
+    options['dataMode'] = 'regions';
+
 
     var self = this,
         i,
