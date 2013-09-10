@@ -8,25 +8,26 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/overrides.css
+    ">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/gmaps.js"></script>
+    
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
+
   <style type="text/css"></style></head>
 
   <body style="zoom: 1;">
@@ -55,9 +56,32 @@
       <form class="row">
         <input type="text" class="span4 search-query" placeholder="Search">
       </form>
+        
+        <div id="map" class="map row"></div>
 
-      <h1>Bootstrap starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+      <script>
+    $(document).ready(function(){
+    var map = new GMaps({
+    el: '#map',
+    lat: 51.5073346,
+    lng: -0.1276831,
+    zoom: 12,
+    zoomControl : true,
+    zoomControlOpt: {
+        style : 'SMALL',
+        position: 'TOP_LEFT'
+    },
+    panControl : false,
+    click: function(e){
+      alert('Click event');
+    },
+    dragend: function(e){
+      alert('Drag Event');
+    }
+  });
+});
+  </script>
+      
 
     </div> <!-- /container -->
 
