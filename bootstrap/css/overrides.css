@@ -10,33 +10,24 @@
 }
 .events, .incidents {
 	margin-top: 40px;
-	margin-bottom: 100px;
+	margin-bottom: 100px;	
 }
 
-
-path {
-	stroke: blue;
-	stroke-width: 1;
-	fill: none;
+#cities {
+    padding: 0;
+    margin-top: 450px;
+    margin-left: 100px;	
+    z-index: 1;
+    display: block;
+    position: relative;
+    list-style: none;
 }
-			
-.axis {
-  shape-rendering: crispEdges;
+#cities li{
+    float: left;
+    display: inline-block;
+    margin-left: 20px;
 }
+#cities li a {
+	color: #ccf;
 
-.x.axis line {
-  stroke: grey;
-}
-
-.x.axis .minor {
-  stroke-opacity: .5;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.y.axis line, .y.axis path {
-  fill: none;
-  stroke: #000;
 }

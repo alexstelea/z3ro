@@ -176,7 +176,8 @@ var GMaps = (function(global) {
           mapTypeControl: mapTypeControl,
           scaleControl: scaleControl,
           streetViewControl: streetViewControl,
-          overviewMapControl: overviewMapControl
+          overviewMapControl: overviewMapControl,
+
         };
 
     if (typeof(options.el) === 'string' || typeof(options.div) === 'string') {
