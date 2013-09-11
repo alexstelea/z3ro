@@ -74,7 +74,7 @@
             });
             
             // Draw
-            var width = 1100,
+            var width = $("#holder").width() - 80,
                 height = 250,
                 leftgutter = 0,
                 bottomgutter = 20,
@@ -109,8 +109,8 @@
             label2.push(r.text(30, 57, "Training").attr(txt1).attr({fill: color}));
             label2.push(r.text(625, 8, "Educational").attr(txt1).attr({fill: color}));
             label2.push(r.text(625, 20, "Materials").attr(txt1).attr({fill: color}));
-            label2.push(r.text(425, 33, "Increase Education").attr(txt1).attr({fill: color}));
-            label2.push(r.text(425, 45, "Expenses").attr(txt1).attr({fill: color}));
+            label2.push(r.text(425, 13, "Increase Education").attr(txt1).attr({fill: color}));
+            label2.push(r.text(425, 25, "Expenses").attr(txt1).attr({fill: color}));
 
             var frame = r.popup(100, 100, label, "right").attr({fill: "#000", stroke: "#666", "stroke-width": 2, "fill-opacity": .7}).hide();
 
@@ -284,11 +284,27 @@
                   <strong></strong>None<br>
                   
                 </div>
-                <div class="span6 incidents">
+                <div id="incident" class="span6 incidents">
                   <h3>Latest Incidents</h3>
+                    <script>
+                    var tid = setTimeout(addIncident, 2000);
+                    
+                    function addIncident() {
+                        var s = '<div class="speech-bubble"><p>Mi hija esta enferma</p></div>';
+                        $('#text').prepend(s);
+                        tid = setTimeout(addIncident, 2000); 
 
-                    <div class="speech-bubble"><p>Mi hija esta enferma</p></div>
-                    <div class="speech-bubble"><p>No fui a la escuelca hoy porque no tuve dinero por el transporte.</p></div>
+
+                    }
+                    function abortTimer() { // to be called when you want to stop the timer
+                      clearTimeout(tid);
+                    }
+                    </script>
+                    <div id="text">
+                        <div class="speech-bubble"><p>Mi hija esta enferma</p></div>
+                        <div class="speech-bubble"><p>No fui a la escuelca hoy porque no tuve dinero por el transporte.</p></div>
+                    </div>
+                    
 
 
                 </div>
