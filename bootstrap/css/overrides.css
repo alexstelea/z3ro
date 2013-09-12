@@ -49,7 +49,7 @@ html, body {
 }
 .speech-bubble {
     position:relative;
-    width: 340px;
+    width: 460px;
     padding: 5px;
     margin: 3em;
     margin-left: 0px;
@@ -87,7 +87,12 @@ html, body {
 }
 
 #incident{
-    overflow: hidden;
+    margin-right: 0px;
+}
+#text{
+    overflow: auto;
     height: 320px;
 }
-
+.events, .incidents {
+    margin-top: 40px;
+}

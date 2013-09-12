@@ -8,9 +8,8 @@
 
             <!-- Le styles -->
             <link href="css/bootstrap.css" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="css/overrides.css
-            ">
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/overrides.css">
+            <script src="js/jquery.min.js"></script>
             <script type="text/javascript"></script>
 
             <script src="js/raphael.js"></script>
@@ -109,8 +108,8 @@
             label2.push(r.text(30, 57, "Training").attr(txt1).attr({fill: color}));
             label2.push(r.text(625, 8, "Educational").attr(txt1).attr({fill: color}));
             label2.push(r.text(625, 20, "Materials").attr(txt1).attr({fill: color}));
-            label2.push(r.text(425, 13, "Increase Education").attr(txt1).attr({fill: color}));
-            label2.push(r.text(425, 25, "Expenses").attr(txt1).attr({fill: color}));
+            label2.push(r.text(425, 33, "Increase Education").attr(txt1).attr({fill: color}));
+            label2.push(r.text(425, 45, "Expenses").attr(txt1).attr({fill: color}));
 
             var frame = r.popup(100, 100, label, "right").attr({fill: "#000", stroke: "#666", "stroke-width": 2, "fill-opacity": .7}).hide();
 
@@ -189,7 +188,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="brand" href="index.html">GOAL2</a>
+                  <a class="brand" href="index.html">Z3R0</a>
                   <div class="nav-collapse collapse">
                     <ul class="nav">
                       <li class="active"><a href="index.html">Map</a></li>
@@ -211,9 +210,8 @@
             <h4 style="color: grey; margin-top: -95px; margin-right:100px;" align="right">#14 in Latin America & The Caribbean</h4>
             <h4 style="color: grey; margin-right:100px;" align="right">#120 in the World</h4>
           
-          <div id="chartContainer" style="height: 300px; width: 100%;">
             <table id="data">
-            		<h4 style="margin-bottom: 0px;" align="center">Primary School Completion Rate</h4>	  
+            		<h4 style="margin-bottom: 0px; margin-top: 70px;" align="center">Primary School Completion Rate</h4>	  
                     <tfoot>
                         <tr>
                             <th>1990</th>
@@ -270,8 +268,6 @@
                 </table>
                 <p style="margin-right: 100px;" class="pull-right">Data Source: UNESCO</p>
                 <div id="holder"></div>
-
-          </div>
               
               <div class="row">
                 <div class="span6 events">
@@ -290,9 +286,10 @@
                     var tid = setTimeout(addIncident, 2000);
                     
                     function addIncident() {
-                        var s = '<div class="speech-bubble"><p>Mi hija esta enferma</p></div>';
+                        var currentdate = new Date();
+                        var s = '<div class="speech-bubble"><p>Mi hija esta enferma<span class="pull-right">'+currentdate.getHours() + ':' + currentdate.getMinutes() + '</span></p></div>';
                         $('#text').prepend(s);
-                        tid = setTimeout(addIncident, 2000); 
+                        tid = setTimeout(addIncident, 5000); 
 
 
                     }
@@ -310,7 +307,9 @@
                 </div>
               </div>
 
-            </div> <!-- /container -->
+            </div>           
+        </div>
+<!-- /container -->
 
             <!-- Le javascript
             ================================================== -->
