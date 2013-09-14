@@ -7,3 +7,4 @@ This project was done by Alex Stelea, Deana Brown, Nekabari Goka, and Amanda Men
 
 It represents an idea that governments should have open access to primary school completion rate information and see how various policies impact different countries around the world in improving the completion rate for primary school students. 
 
+Won 1st place in Education Category, 2nd place overall in the BYND2015 Hackathon.
